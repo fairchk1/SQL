@@ -1,0 +1,27 @@
+--Create a fitness store database
+
+create table fitness(id integer primary key, product text, quantity integer, price integer, brand text);
+insert into fitness values(1,'barbell',5,350,'Rogue');
+insert into fitness values(2,'pull up bar',10,200,'Rogue');
+insert into fitness values(3,'dumbell',10, 300,'Bowflex');
+insert into fitness values(4,'kettlebell',25,75,'Onnit');
+insert into fitness values(5,'wrist wraps',35,15,'Rogue');
+insert into fitness values(6,'belt',20,150,'Eleiko');
+insert into fitness values(7,'bands',50,45,'Shelter');
+insert into fitness values(8,'foam roller',15,25,'Rogue');
+insert into fitness values(9,'squat rack',15,500,'Eleiko');
+insert into fitness values(10,'bench',25,275,'Rogue');
+insert into fitness values(11,'treadmill',20,600,'Bowflex');
+insert into fitness values(12,'clamps',50,15,'Rogue');
+insert into fitness values(13,'bike',10,400,'Eleiko');
+insert into fitness values(14,'jump ropes',30,25,'Rogue');
+insert into fitness values(15,'battle ropes',15,150,'Rogue');
+
+--Display database ordered by price
+
+SELECT * FROM fitness
+order by price desc;
+
+--Display the average price of all items in database
+
+select avg(price) from fitness
